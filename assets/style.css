@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    display: inline;
+    margin: 10px;
+}
+
+p {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+button {
+    background-color: rgb(105, 14, 122);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    padding: 3x;
+}
+
+.timer {
+    text-align: right;
+    float: right;
+}
+
+.highscores {
+    text-align: left;
+    float: left;
+}
+
+.time {
+
+}
+
+.container {
+
+}
+
+#startInstructions {
+
+}
+
+.start {
+}
+
+#start-button {
+
+}
+
+.questions {
+
+}
+
+.hide {
+
+}
+
+#questionTitle {
+
+}
+
+#multipleChoices {
+
+}
+
+.choices {
+
+}
+
+#end-screen {
+
+}

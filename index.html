@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="assets/style.css"/>
 </head>
-<body>
-    <header> Pop Quiz 
-        <div> </div>
-    </header>
 
-<section>
-    <div>
-        <h2>View Highscores</h2>
+<header>
+    <div class="highscores">
+        <a hef="highscores.html">View Highscores<a>
     </div>
-</section>
-<section>
-    <div>
-        <h2>Time: <span class="countingup">0</span></h2>
+    <div class="timer">Time: <span class="time">60</span>
     </div>
-</section>
+</header>
 
 <main>
+<body>
+    <div class="container"> 
+        <div id="startInstructions" class="start">
+        <h1>Coding Quiz Challenge</h1> 
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds. </p>
+        <button id="start-button">Start Quiz</button>
+    </div>
+
+    <div class="questions" class="hide">
+        <h2 id="questionsTitle"></h2>
+        <div id="multipleChoices" class="choices"> </div>
+    </div>
+
+    <!-- <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <div class="time"></div> -->
+
+    </div>
 
 </main>
 <script src="assets/script.js"></script>
