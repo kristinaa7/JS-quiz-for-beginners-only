@@ -29,6 +29,15 @@ button {
     font-size: 16px;
     text-align: center;
     padding: 3x;
+    line-height: 24px;
+    line-break: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(202, 33, 202);
+    transition: 0.2s;
 }
 
 .timer {
@@ -41,7 +50,7 @@ button {
     float: left;
 }
 
-.time {
+/* .time {
 
 }
 
@@ -62,17 +71,25 @@ button {
 
 .questions {
 
-}
+} */
 
 .hide {
-
+display: none;
 }
 
-#questionTitle {
 
+#questionsTitle {
+   margin-left: 400px;
+   margin-right: 400px;
+   text-align: center;
 }
 
-#multipleChoices {
+ul {
+    margin-left: 185px;
+    text-align: left;
+}
+
+/* #multipleChoices {
 
 }
 
@@ -82,4 +99,4 @@ button {
 
 #end-screen {
 
-}
+} */

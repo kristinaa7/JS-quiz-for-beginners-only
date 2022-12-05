@@ -12,29 +12,33 @@
     <div class="highscores">
         <a hef="highscores.html">View Highscores<a>
     </div>
-    <div class="timer">Time: <span class="time">60</span>
+    <div class="timer">Time: <span class="time">0</span>
     </div>
 </header>
 
 <main>
 <body>
     <div class="container"> 
-        <div id="startInstructions" class="start">
         <h1>Coding Quiz Challenge</h1> 
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds. </p>
         <button id="start-button">Start Quiz</button>
     </div>
 
-    <div class="questions" class="hide">
-        <h2 id="questionsTitle"></h2>
-        <div id="multipleChoices" class="choices"> </div>
+<!-- look up how to hide and unhide elements on eventlistener -->
+<!-- hint: to place multiple classes use the same quotations -->
+    <div id="questions" class="hide">
+        <h2 id="questionsTitle">Question1</h2>
+        <ul>
+        <ul> <button class="choice1">A</button> </ul>
+        <ul> <button class="choice2">B</button> </ul>
+        <ul> <button class="choice3">C</button> </ul>
+        <ul> <button class="choice4">D</button> </ul>
+        </ul>
     </div>
 
     <!-- <div id="end-screen" class="hide">
         <h2>All done!</h2>
         <div class="time"></div> -->
-
-    </div>
 
 </main>
 <script src="assets/script.js"></script>
