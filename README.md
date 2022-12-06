@@ -2,7 +2,7 @@
 
 ## Description 
 
-We have all been there before. Javascript was once new for us all. This quiz was designed specificially for those new to the game of coding with limited to no understanding of Javascript. 
+We have all been there before. Javascript was once new for us all. This quiz was designed specificially for those new to the game of coding with limited to no understanding of Javascript. Here you will have 5 questions that test your beginner Javascript knowledge to help you get started with understanding the basics. You will have 75 seconds to complete the test, but beware as the time will decrement if an incorrect answer is chosen. 
 
 ## Licenses
 
@@ -10,23 +10,12 @@ N/A
 
 ## Usage
 
+To begin the quiz, first read the instructions. The start button is located in the center of the page and will begin the timer of 75 seconds. The first multiple choice question will pop up with 4 options. Beware as an incorrect answer will deduct your time by 15 seconds. Choosing the correct answer will add an extra second to your timer. This continues for all five questions. Once you reach the last and final question, each of the options will move you to the end screen that presents your score and enables you to add your initials that will then be saved to local storage for later access. When you have reached the end, you can circle back and start the quiz from the beginning or view your highscores.
+
 ### Preview Picture
-![alt text](insertrelativepathhere)
+![alt text](assets/firstpage.png)
 
 ### Link To Webpage
 
 ## Credits
-
 N/A
-
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score

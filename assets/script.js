@@ -15,16 +15,17 @@ var goBack = document.getElementById("goBack");
 var clearScores = document.getElementById("clearScores");
 var response = document.getElementById("response")
 var endScreen = document.getElementById("end-screen")
+var highscores = document.querySelectorAll(".highscores")
 
 //allows us to keep track of the question you are on the quiz
 var questionindex = 0
+var score = 0
 
 startbutton.addEventListener ("click", startquiz);
 choice1.addEventListener ("click", renderNext);
 choice2.addEventListener ("click", renderNext);
 choice3.addEventListener ("click", renderNext);
 choice4.addEventListener ("click", renderNext);
-
 
 var questions = [
     {"question": "Commonly used data types DO Not Include:", 
@@ -77,10 +78,13 @@ function renderNext(event) {
         console.log('Correct');
         //posts it to the page by calling the function answerFeedback
         answerFeedback ("Correct");
+        secondsLeft++
         } else {
         console.log('Incorrect');
         answerFeedback("Incorrect");
+        secondsLeft = secondsLeft-15
         }
+
 
     questionindex++
     questionsTitle.textContent = questions[questionindex].question
