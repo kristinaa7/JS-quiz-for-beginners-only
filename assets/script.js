@@ -27,8 +27,8 @@ choice1.addEventListener ("click", renderNext);
 choice2.addEventListener ("click", renderNext);
 choice3.addEventListener ("click", renderNext);
 choice4.addEventListener ("click", renderNext);
-goBack.addEventListener ("click", resetGame);
-highscores.addEventListener ("click", seehighscores);
+// goBack.addEventListener ("click", resetGame);
+// highscores.addEventListener ("click", seehighscores);
 
 //Array of questions, possible answer choices, correct answer
 var questions = [
@@ -61,7 +61,7 @@ function countdown() {
     }, 1000); 
 }
 
-//The startquiz function shows each question and has the countdown function to begin
+//The startquiz function shows each question and has the countdown 
 function startquiz() {
     countdown()
     container.classList.add("hide");
@@ -89,7 +89,6 @@ function renderNext(event) {
         secondsLeft = secondsLeft-15
         }        
     }
-
     questionindex++
     questionsTitle.textContent = questions[questionindex].question
     choice1.textContent = questions[questionindex].options[0]
@@ -103,15 +102,15 @@ function answerFeedback(Correct) {
 response.textContent = Correct
 }
 
-function finalpage() {
-    questionEl.classList.add("hide");
-    endScreen.classList.remove("hide");
-}
+// function finalpage() {
+//     questionEl.classList.add("hide");
+//     endScreen.classList.remove("hide");
+// }
 
-function resetGame() {
+// function resetGame() {
 
-}
+// }
 
-function seehighscores() {
+// function seehighscores() {
 
-}
+// }
