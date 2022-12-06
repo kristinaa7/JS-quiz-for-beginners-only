@@ -50,28 +50,6 @@ button:hover {
     float: left;
 }
 
-/* .time {
-
-}
-
-.container {
-
-}
-
-#startInstructions {
-
-}
-
-.start {
-}
-
-#start-button {
-
-}
-
-.questions {
-
-} */
 
 .hide {
 display: none;
@@ -89,14 +67,7 @@ ul {
     text-align: left;
 }
 
-/* #multipleChoices {
-
+#response {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.choices {
-
-}
-
-#end-screen {
-
-} */

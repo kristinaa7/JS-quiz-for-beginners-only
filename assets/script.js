@@ -1,10 +1,9 @@
 //creating timer
 var timeEl = document.querySelector(".time");
 var secondsLeft = 75;
-var timerInverval ;
+var timerInverval;
 
 var container = document.querySelector(".container");
-var start = document.querySelector(".start");
 var questionsTitle = document.getElementById("questionsTitle");
 var choice1 = document.querySelector(".choice1");
 var choice2 = document.querySelector(".choice2");
@@ -12,12 +11,20 @@ var choice3 = document.querySelector(".choice3");
 var choice4 = document.querySelector(".choice4");
 var startbutton = document.getElementById('start-button');
 var questionEl = document.getElementById("questions");
+var goBack = document.getElementById("goBack");
+var clearScores = document.getElementById("clearScores");
+var response = document.getElementById("response")
+var endScreen = document.getElementById("end-screen")
+
+//allows us to keep track of the question you are on the quiz
+var questionindex = 0
 
 startbutton.addEventListener ("click", startquiz);
 choice1.addEventListener ("click", renderNext);
 choice2.addEventListener ("click", renderNext);
 choice3.addEventListener ("click", renderNext);
 choice4.addEventListener ("click", renderNext);
+
 
 var questions = [
     {"question": "Commonly used data types DO Not Include:", 
@@ -37,36 +44,18 @@ var questions = [
     "answer": "4. console.log"},
 ];
 
-
-// var score = 0;
-// for (let index = 0; index < questions.length; index++) {
-//     const questionEl = questions[index];
-
-// // if (questionEl == questions[index])
-// //     score++;
-// //     alert("Correct!");
-
-// }
-
-
-// alert("you got " + score + "/")
-// console.log(questions);
-
 //making the timer work
 //get the timer to start when start quiz button is clicked
 function countdown() {
      timerInverval = setInterval(function() {
         secondsLeft--;
-        timeEl.textContent = "Time: " + secondsLeft;
+        timeEl.textContent = secondsLeft;
 //if question is wrong 15 seconds is deleted
         if(secondsLeft === 0) {
             clearInterval(timerInverval)
-            // sendMessage()
         }
     }, 1000); 
 }
-var questionindex = 0
-
 
 function startquiz() {
     countdown()
@@ -83,16 +72,31 @@ function startquiz() {
 function renderNext(event) {
      console.log(event.target.textContent) 
      console.log(event)
+
+     if (event.target.textContent == questions[questionindex].answer) {
+        console.log('Correct');
+        //posts it to the page by calling the function answerFeedback
+        answerFeedback ("Correct");
+        } else {
+        console.log('Incorrect');
+        answerFeedback("Incorrect");
+        }
+
     questionindex++
     questionsTitle.textContent = questions[questionindex].question
     choice1.textContent = questions[questionindex].options[0]
     choice2.textContent = questions[questionindex].options[1]
     choice3.textContent = questions[questionindex].options[2]
     choice4.textContent = questions[questionindex].options[3]
-
 }
 
-// function sendMessage() {
-//     timeEl.textContent = "Congrats, you have completed the quiz.";
-//   }
+//causes the feedback to show
+function answerFeedback(Correct) {
+response.textContent = Correct
+}
+
+function finalpage() {
+    questionEl.classList.add("hide");
+    endScreen.classList.remove("hide");
+}
 
