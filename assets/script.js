@@ -88,14 +88,14 @@ function renderNext(event) {
         answerFeedback("Incorrect");
         secondsLeft = secondsLeft-15
         }        
-    }
+    
     questionindex++
     questionsTitle.textContent = questions[questionindex].question
     choice1.textContent = questions[questionindex].options[0]
     choice2.textContent = questions[questionindex].options[1]
     choice3.textContent = questions[questionindex].options[2]
     choice4.textContent = questions[questionindex].options[3]
-
+    }
 
 //causes the feedback to show
 function answerFeedback(Correct) {
